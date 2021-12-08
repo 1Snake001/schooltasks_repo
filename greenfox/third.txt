@@ -1,0 +1,4 @@
+1 This is a fourth text!
+2 This is another text file by Snake!
+3 This is a third text contetn now!
+4 This a first text whit me!
