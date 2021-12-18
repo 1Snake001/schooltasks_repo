@@ -1,0 +1,95 @@
+Alap utasításokx
+Írasd ki a jelenlegi könyvtár elérési útját *
+Írasd ki a fájlokat és könyvtárakat a jelenlegi mappában*
+Hozz létre egy greenfox nevű könyvtárat*
+Mozogj a greenfox könyvtárba*
+(Elmozgás nélkül) írasd ki a szülő könyvtár tartalmát*
+Hozz létre egy üres index.html fájlt
+Hozz létre egy images nevű könyvtárat
+Hozz létre egy css nevű könyvtárat
+Mozogj a images könyvtárba
+Mozogj vissza a szülő könyvtárba
+Hozz létre legalább egy fájlt minden könyvtárban
+Hozz létre egy first-task könyvtárat a greenfox könyvtárban
+Mozgass be minden más fájlt és könyvtárat a first-task könyvtárba
+Innentől dolgozz mindig a greenfox mappában
+Git alapok
+Hozz létre egy fork-ot erről a repository-ról: https://github.com/green-fox-academy/git-lesson-repository.git
+
+Látogass el az oldalra
+Nyomj a fork-ra
+Hozz létre egy klónt a greenfox könyvtárba.
+
+git clone
+A fork-ról hozd létre a klónt, ne az eredeti repository-ról
+Fájl műveletek
+Lépj be az újonnan létrehozott repository-ba
+Listázd ki a részletes információkat a benne található fájlokról és könyvtárakról
+Másold le a index.html fájlt about.html néven
+Hozz létre egy temp_images nevű könyvtárat
+Másold bele a 1.jpg és 2.jpg fájlokat a temp_images könyvtárba az images-ből
+Mozgasd a 6.jpg fájlt az images könyvtárba a css-ből
+Töröld ki a 7.jpg fájlt a css-ből
+Commit-old és Push-old a változtatásaidat
+
+Átirányítás
+Írj szöveges tartalmat egy fájlba
+Irányítsd át a fájl tartalmát egy másikba
+Írasd ki egy fájl sorba rakott tartalmát
+Írd át egy fájlba egy másik fájl sorrendbe rakott tartalmát
+Szedd ki az ugyan olyan sorokat a tasks.txt fájlból
+Írd ki az összes sorát a tasks.txt fájlnak ami tartalmazza a basic szót
+Commit-old és Push-old a változtatásaidat
+
+A munka környezeted
+Hozz létre egy repository-t GitHub-on
+A green-fox-academy organization alatt, és neve egyezzen meg a GitHub felhasználó neveddel
+Hozz létre egy klónt a greenfox könyvtárba
+A könyvtár struktúrád nezzen ki így:
+greenfox
+github-felhasználó-név (ez legyen a klónozott repository, ami a GitHub felhasználó neved alapján van elnevezve)
+week-01
+day-1
+tartalmak az első napra
+day-2
+day-3
+Hozz létre könyvtár sturktúrát az eddigi napokról és hetekről, és innentől ezt követve dolgozz ebbe a repository-ba
+Mozgasd az eddigi tartalmaidat a megfelelő könyvtárakba
+Egy repository könyvtár nem működik az elvárt módon ha benne van egy másik repository-ban
+Szóval ne mozgasd a git-lesson-repository könyvtárat a másik a másik repository-dba
+Vagy bármilyen másik repository-t
+A repository-jaid legyenek a greenfox könyvtárban:
+greenfox
+githubusername
+git-lesson-repository
+patchwor
+Adj hozzá egy .gitignore fájlt a repository-d gyökér könyvtárába
+Gyakorlás
+Lépj be a github-felhasznalonev könyvtárba
+Nézd meg a változtatásokat git segítségével
+Add őket hozzá a stage-hez
+Hozz létre egy commit-ot jól érthető üzenettel
+Lépj be a mai naphoz tartozó könyvtárba
+Hozz létre 5 könyvtárat és benne fájlokat tartalommal
+Nézd meg a változtatásokat git segítségével
+Add őket hozza a stage-hez
+Hozz létre egy commit-ot jól érthető üzenettel
+Változtatsd meg két fájl tartalmát
+Nézd meg a változtatásokat git segítségével
+Hozz létre egy commit-ot jól érthető üzenettel
+Publikáld a változtatásaidat GitHub-ra
+Nézd meg a változtatásokat GitHub-on
+Még Gyakorlás
+Változtasd meg két fájl tartalmát
+Add a változtatásokat hozzá a stage-hez
+Ellenőrizd le, hogy mi van benne a stage-ben
+Vond vissza a változtatásokat a stage-ből
+Változtatss meg újra két fájlt
+Hozz létre egy commit-ot jól érthető üzenettel
+Publikáld a változtatásaidat GitHub-ra
+Weboldal
+Hozz létre egy új repository-t GitHub-on <felhasználó-neved>.github.io néven, pl: eggdice.github.io
+Hozz létre egy klónt a greenfox könyvtáradba
+Csinálj egy index.html fájlt és töltsd meg tartalommal, használhatod a a régebbi feladataidat
+Publikáld a munkádat GitHub-ra
+Nézd meg a weboldalad a http://<felhasználó-neved>.github.io oldalon
