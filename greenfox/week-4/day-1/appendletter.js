@@ -7,11 +7,11 @@ let animals = ['bo', 'anacond', 'koal', 'pand', 'zebr'];
 console.log(appendA(animals)); 
 */
 
-let animals = ['bo', 'anacond', 'koal', 'pand', 'zebr'];
+let animals = ["bo", "anacond", "koal", "pand", "zebr"];
 
-function appendA(animals){
-  let newanimals = animals.map(animal => animal + 'a')
+function appendA(animals) {
+  let newanimals = animals.map((animal) => animal + "a");
 
-  return newanimals
-};
+  return newanimals;
+}
 console.log(appendA(animals));
