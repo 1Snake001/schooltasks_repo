@@ -59,9 +59,8 @@ p {
   display: block;
   margin: 0px auto 0px auto;
   width: 200px;
-   border-radius: 100px; 
-  border: solid 1px rgb(131, 58, 180);
-  outline: solid 3px #d3d3d3;
+  border-radius: 100px;
+  border: solid 4px lightgrey;
 }
 
 .top-main {

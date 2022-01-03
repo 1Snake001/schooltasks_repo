@@ -1,3 +1,5 @@
+'use strict'
+
 /*
 A Szaturnusz hiányzik a bolygók listájából, rakd be a megfelelő helyre!
 Készíts egy putSaturn() függvényt, mely bemeneti paraméterként egy listát vár, visszatérési értéke pedig a helyes lista.
