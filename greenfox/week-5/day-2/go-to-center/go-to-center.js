@@ -19,11 +19,11 @@ let lineDrawer = (x, y) => {
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
-}
+};
 
 for (let i = 1; i <= 5; i++) {
   lineDrawer(
     getRandomInt(canvas.width / 5) * i,
     getRandomInt(canvas.height / 5) * i
   );
-}
+};
