@@ -1,0 +1,15 @@
+
+#title{
+    margin-top: 20px;
+}
+
+.main-button{
+    margin: 20px;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+  }

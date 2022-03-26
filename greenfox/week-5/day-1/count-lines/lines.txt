@@ -1,0 +1,5 @@
+Ezek itt
+azok a sorok,
+amelyeket 
+a programnak
+meg kell számolnia!
