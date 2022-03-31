@@ -1,0 +1,19 @@
+$theme-colors: (
+  "primary": #8b0000,
+  "danger": black,
+  "warning": yellow,
+);
+
+.t-background {
+  background-color: map-get($theme-colors, "warning");
+}
+
+#title {
+  margin-top: 20px;
+}
+
+.main-button {
+  margin: 20px;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

@@ -1,0 +1,15 @@
+%margin {
+  margin: 20px;
+}
+
+%color {
+  color: red;
+}
+
+.hiba {
+    &-komoly {
+      @extend %margin;
+      @extend %color;
+    }
+  @extend %margin;
+}

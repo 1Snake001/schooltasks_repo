@@ -1,0 +1,13 @@
+@function color-setter($value){
+@if($value == true){
+     @return #000;
+  }
+@if($value == false){
+     @return#fff ;
+  }
+}
+
+body{
+    background-color: color-setter(true);
+    color: color-setter(false);
+}

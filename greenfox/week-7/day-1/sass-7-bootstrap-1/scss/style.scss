@@ -1,0 +1,23 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+    tr, td{
+        border: solid 1px gray;
+    }
+}
+
+.t-background{
+    background-color:silver;
+}
+
+#title{
+    margin-top: 20px;
+}
+
+.main-button{
+    margin: 20px;
+    color: white;
+}

@@ -1,0 +1,19 @@
+@mixin mixin-value {
+  background-color: #acac27;
+  font-size: 50px;
+  margin: 35px;
+}
+
+body{
+    @include mixin-value;
+    main{
+        @include mixin-value;
+        
+        section{
+            @include mixin-value;
+        }
+        div{
+            @include mixin-value;
+        }
+    }
+}

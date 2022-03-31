@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$primary-color:#4e4e3e;
+
+body{
+   background-color: $primary-color;
+}
+
+p{
+background-color: $primary-color;
+}
+
+div{
+background-color: $primary-color;
+}
+
+section{
+    background-color: $primary-color;
+}
