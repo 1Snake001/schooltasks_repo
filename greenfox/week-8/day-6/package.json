@@ -1,0 +1,16 @@
+{
+  "name": "day-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "count-letters.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "tape": "^5.5.2"
+  }
+}

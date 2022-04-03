@@ -1,0 +1,19 @@
+{
+  "name": "day-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sum.js",
+  "dependencies": {
+    "tape": "^5.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
