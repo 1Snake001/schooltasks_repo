@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  width: 804px;
+  background-color: rgb(167, 38, 255);
+}
+.nav :first-child {
+  flex-basis: 15%;
+}
+
+.item {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(0, 235, 254);
+  margin-left: 10px;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+}
+.green {
+  width: 267px;
+  height: 500px;
+  background-color: rgb(70, 212, 42);
+  align-self: stretch;
+}
+.yellow {
+  width: 537px;
+  height: 500px;
+  background-color: rgb(255, 214, 61);
+}

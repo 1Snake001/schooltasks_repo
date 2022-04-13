@@ -1,0 +1,106 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    margin: 20px 20px;
+    flex-direction: column;
+}
+
+.container1 {
+    display: flex;
+    height: 70px;
+    list-style-type: none;
+    background-color: rgb(166, 38, 255);
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3%;
+    margin: 0;
+}
+
+.item {
+    height: 40px;
+    width: 80px;
+    background-color: rgb(14, 241, 230);
+    display: flex;
+    margin-right: 10px;
+}
+
+.item:nth-child(1) {
+    flex-basis: 15%;
+}
+
+.invisible {
+    opacity: 0;
+    flex-basis: 65%;
+}
+
+.right {
+    height: 40px;
+    width: 40px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    background-color: rgb(255, 208, 37);
+    flex-basis: 65%;
+    text-align: start;
+}
+
+aside {
+    background-color: rgb(71, 206, 0);
+    flex-basis: 35%;
+}
+
+p {
+    display: flex;
+    padding: 10px;
+}
+
+article {
+    padding: 10px;
+    justify-self: flex-start;
+}
+
+.aside-nav {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    justify-content: stretch;
+    padding: 0;
+}
+
+.aside-item {
+    display: flex;
+    height: 40px;
+    width: 90%;
+    background-color: rgb(77, 47, 79);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.red-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+}
+
+.red-box {
+    height: 4rem;
+    flex-basis: 25%;
+    background-color: rgb(230, 0, 29);
+    margin: 5px;
+}
+
+.text-row {
+    margin: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+}

@@ -1,0 +1,26 @@
+body{
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+ height: 300px;;
+  width: 300px;
+}
+
+.green {
+  background-color: rgb(70, 212, 42);
+}
+
+.yellow {
+  background-color: rgb(255, 214, 61);
+}
+
+.purple{
+    background-color: rgb(117, 46, 251);
+}

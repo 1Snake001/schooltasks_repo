@@ -1,0 +1,30 @@
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item {
+  height: 200px;
+  width: 600px;
+}
+
+.green {
+  background-color: rgb(70, 212, 42);
+}
+
+.yellow {
+  background-color: rgb(255, 214, 61);
+  order: 3;
+  flex-basis: 400px;
+}
+
+.purple {
+  background-color: rgb(167, 38, 255);
+  order: 2;
+}

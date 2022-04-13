@@ -1,0 +1,31 @@
+body{
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction:row-reverse;
+}
+
+.item {
+ height: 300px;;
+  width: 300px;
+}
+
+.green {
+  background-color: rgb(70, 212, 42);
+  flex-basis: 25%;
+}
+
+.yellow {
+  background-color: rgb(255, 214, 61);
+  /* flex-grow: 0.5; */
+  flex-basis: 50%;
+}
+
+.purple{
+    background-color: rgb(167, 38, 255);
+    flex-basis: 25%;
+}
