@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Radio</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <div class="radios">
+          <h3>Mi a kedvenc állatod?</h3>
+          <div class="form-group">
+            <input type="radio" name="animal" id="dog" onclick="checkbox1()" />
+            <label for="dog">Kutya</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="animal" id="cat" onclick="checkbox1()" />
+            <label for="cat">Cica</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" name="animal" id="fish" />
+            <label for="fish">Viktor, az aranyhal</label>
+          </div>
+        </div>
+        <br />
+        <h3>Szeretnél feliratkozni a macskákkal kapcsolatos hírlevélre?</h3>
+        <div class="form-group">
+          <input type="radio" name="choice1" id="yes" onclick="checkbox2()" />
+          <label for="">igen</label>
+        </div>
+        <div class="form-group">
+          <input type="radio" name="choice1" onclick="checkbox4()" id="no" />
+          <label for="">nem</label>
+        </div>
+        <br />
+        <div class="form-group">
+          <input type="radio" name="choice2" id="like-cats" disabled />
+          <label for="">szeretem a macskákat</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="radio"
+            name="choice2"
+            id="subscription"
+            onclick="checkbox3()"
+            disabled
+          />
+          <label for="">Feliratkozás</label>
+        </div>
+      </fieldset>
+    </form>
+    <script>
+      let subscription = document.querySelector("#subscription");
+      function checkbox1() {
+        let dog = document.querySelector("#dog");
+        let cat = document.querySelector("#cat");
+
+        if (dog.checked || cat.checked) {
+          subscription.disabled = false;
+        }
+      }
+
+      function checkbox2() {
+        let yes = document.querySelector("#yes");
+        let likeCats = document.querySelector("#like-cats");
+
+        if (yes.checked) {
+          likeCats.disabled = false;
+        }
+      }
+
+      function checkbox3() {
+        if (subscription.checked) {
+          alert(
+            "Köszönjük, sikeresen feliratkoztál a macskákkal kapcsolatos hírlevelünkre"
+          );
+        }
+      }
+
+      function checkbox4() {
+        let fish = document.querySelector("#fish");
+        let no = document.querySelector("#no");
+
+        if(fish.checked || no.checked){
+          alert("Upsz, mégis felvettünk a macskákkal kapcsolatos hírlevelünkre");
+        }
+      }
+    </script>
+  </body>
+</html>
