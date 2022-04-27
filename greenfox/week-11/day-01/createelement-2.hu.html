@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="asteroids">
+      <li>The King</li>
+    </ul>
+
+    <!--
+          Dolgozhatsz a html script tag-en belül, vagy külön js fájlban is,
+          utóbbi esetén ne felejtsd el beimportálni a js fájlt az alábbi módon:
+          <script src="createelement-2.js"></script>
+          Távolítsd el a 'The King' elemet a listából.
+          Töltsd fel a listát az alábbi lista elemeivel (csak az aszteroidákat add
+          hozzá).
+          Minden listaelem kategóriája legyen az adott objektum "category"
+          tulajdonsága, a "content" tulajdonság pedig a tartalma.
+        -->
+
+    <script>
+      const planetData = [
+        {
+          category: "inhabited",
+          content: "Foxes",
+          asteroid: true,
+        },
+        {
+          category: "inhabited",
+          content: "Whales and Rabbits",
+          asteroid: true,
+        },
+        {
+          category: "uninhabited",
+          content: "Baobabs and Roses",
+          asteroid: true,
+        },
+        {
+          category: "inhabited",
+          content: "Giant monsters",
+          asteroid: false,
+        },
+        {
+          category: "inhabited",
+          content: "Sheep",
+          asteroid: true,
+        },
+      ];
+
+      let removedLi = document.getElementsByTagName("ul")[0].firstElementChild;
+
+      removedLi.remove();
+
+      function addLi() {
+        let ul = document.querySelector(".asteroids");
+
+        for (let i = 0; i < planetData.length; i++) {
+          if (planetData[i].asteroid == true) {
+            let li = document.createElement("li");
+
+            li.innerHTML = planetData[i].content;
+            ul.appendChild(li);
+          }
+        }
+      }
+
+      addLi();
+    </script>
+  </body>
+</html>

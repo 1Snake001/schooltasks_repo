@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Workshop: ClassList</title>
+    <style>
+      .red {
+        color: red;
+      }
+
+      .lufi {
+        background-color: lime;
+        border-radius: 100%;
+       /*  padding: 200px; */
+      }
+
+      .körte {
+        background: lime;
+        padding: 2rem;
+        text-decoration: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="alma">alma</p>
+    <p class="lufi">lufi</p>
+    <p class="cica red-dot">cica</p>
+    <p class="delfin">delfin</p>
+
+    <!--
+      Dolgozhatsz a HTML script tag-en belül, vagy külön js fájlban is,
+      utóbbi esetén ne felejtsd el beimportálni a js fájlt az alábbi módon:
+      <script src="classlist-1.js"></script>
+    <script>
+      Ha a 4. p-nek van 'delfin' osztálya, cseréld le az alma tartalmát
+      arra, hogy with 'körte'.
+      Ha az 1. p-nek van 'alma' osztálya, cseréld le az cica tartalmát
+      arra, hogy with 'kutya'.
+      Legyen az "alma" piros színű, adj hozzá a .red osztályt
+      Legyen a lufi lufiszerűbb (változtasd meg az alakját a mostanihoz képest)
+    </script>
+  -->
+  <script>
+      let p = document.getElementsByTagName("p");
+      
+      for (let i = 0; i < p.length; i++) {
+          if (p[i].className == "delfin") {
+              p[i].innerHTML = "körte";
+            }
+            if (p[i].className == "alma") {
+                document.getElementsByClassName("cica")[0].innerHTML = "kutya";
+            }
+        }
+        
+        let apple = document.getElementsByClassName("alma");
+        let lufi = document.getElementsByClassName('lufi');
+        
+        apple[0].style.color = "red";
+        lufi[0].style.padding = '200px';
+        
+        </script>
+    </body>
+</html>

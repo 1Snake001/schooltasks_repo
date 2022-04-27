@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="apple">apple</p>
+    <p class="balloon">banana</p>
+    <p class="cat">car</p>
+    <p class="animals">goat rabbit <strong>cat</strong> dog</p>
+
+    <!--
+      Dolgozhatsz a HTML script tag-en belül, vagy külön js fájlban is,
+      utóbbi esetén ne felejtsd el beimportálni a js fájlt az alábbi módon:
+      <script src="content-1.js"></script>
+    <script>
+    1) Fűzd hozzá minden p tag-hez az előző tartalmát.
+    2) Ezt ismételd meg, de a cat maradjon kiemelve (strong)
+    </script>
+   -->
+    <script>
+      let p = document.getElementsByTagName("p");
+  
+       for(let i = p.length -1; i >= 0; i--){
+             console.log(p[i]);
+             p[p.length -1].innerHTML +=` ${p[i-1].innerText} `;
+       }
+       
+    </script>
+  </body>
+</html>

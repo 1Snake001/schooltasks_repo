@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="main.css" /> -->
+    <title>List Manager</title>
+  </head>
+
+  <body>
+    <!-- Ne módosítsd ezt a fájlt! -->
+    <!--
+    1, Építsd fel a szükséges struktúrát JavaScript-el (használj szemantikus html elemeket)
+
+    2, Formázd az oldalt a megadott módon! (CSS)
+
+    3, Ne használj CSS class-okat! (Próbáld megoldani csupán a tag-ek
+      segítségével. Segítség: itt nézz körül: http://tamop412.elte.hu/tananyagok/weblapkeszites/lecke11_lap5.html)
+
+    4, Adj hozzá funkcionalitást a gombokhoz!
+        - Ha a "Fel" -ra kattintasz, a kiemelés eggyel mozogjon feljebb
+        - Ha a "Le" -ra kattintasz, a kiemelés eggyel mozogjon lejebb
+        - Ha az "X" -ra kattintasz, a kiemelt elemet távolítsa el a program,
+          a kiemelés pedig kerüljön a legfelső elemre
+        - Ha a ">" -ra kattintasz, a kiemelt elem kerüljön át a jobb oldalra
+        és baloldalon a kiemelés kerüljön a legfelső elemre
+        
+    5, Gondolj a szélsőséges esetekre is, ne legyen hiba a konzolon!
+   -->
+    <script>
+      let body = document.getElementsByTagName("body");
+      let mainDiv = document.createElement("div");
+      mainDiv.style.display = "flex";
+
+      mainDiv.style.flexDirection = "row";
+      mainDiv.style.margin = "auto";
+      mainDiv.style.width = "100%";
+      mainDiv.style.border = "1px solid black";
+
+      let div1 = document.createElement("div");
+      div1.style.border = "1px solid black";
+      div1.style.margin = "10px";
+      div1.style.width = "33%";
+      div1.style.height = "100px";
+
+      let div2 = document.createElement("div");
+      div2.style.width = "33%";
+      div2.style.height = "100px";
+      div2.style.margin = "10px";
+      div2.style.border = "1px solid black";
+
+      let div3 = document.createElement("div");
+      div3.style.border = "1px solid black";
+      div3.style.width = "33%";
+      div3.style.margin = "10px";
+      div3.style.height = "100px";
+
+      let ulLeft = document.createElement("ul");
+      ulLeft.style.paddingLeft = "5px";
+
+      ulLeft.style.listStyle = "none";
+      ulLeft.style.fontSize = "large";
+      ulLeft.style.margin = "1px";
+
+      function createListItems() {
+        for (let i = 0; i < 4; i++) {
+          let li = document.createElement("li");
+          ulLeft.appendChild(li);
+        }
+        div1.appendChild(ulLeft);
+      }
+      createListItems();
+      console.log(ulLeft.children[0]);
+
+      ulLeft.children[0].innerHTML = "bread";
+      ulLeft.children[0].style.backgroundColor = "gray";
+      ulLeft.children[1].innerHTML = "milk";
+      ulLeft.children[2].innerHTML = "orange";
+      ulLeft.children[3].innerHTML = "tomato";
+
+      mainDiv.appendChild(div1);
+
+      // button
+      function createButtonList() {
+        for (let i = 0; i < 4; i++) {
+          let button = document.createElement("button");
+          div2.appendChild(button);
+        }
+      }
+
+      createButtonList();
+
+      // button style
+      div2.children[0].innerHTML = "Up";
+      div2.children[0].style.display = "block";
+      div2.children[0].style.padding = "block";
+      div2.children[0].style.height = "25%";
+      div2.children[0].style.textAlighn = "start";
+      div2.children[0].setAttribute("onclick", "Up()");
+
+      div2.children[1].innerHTML = ">";
+      div2.children[1].style.height = "25%";
+      div2.children[1].style.display = "block";
+      div2.children[1].setAttribute("onclick", "moveToTheRight()");
+
+      div2.children[2].innerHTML = "X";
+      div2.children[2].setAttribute("onclick", "deleteItem()");
+
+      div2.children[2].style.display = "block";
+      div2.children[2].style.height = "25%";
+      div2.children[3].innerHTML = "Down";
+      div2.children[3].style.display = "block";
+      div2.children[3].style.height = "25%";
+      div2.children[3].setAttribute("onclick", "down()");
+
+      div2.style.display = "flex";
+      div2.style.alignContent = "stretch";
+      div2.style.flexDirection = "column";
+
+      mainDiv.appendChild(div2);
+
+      let ulRight = document.createElement("ul");
+      div3.appendChild(ulRight);
+      mainDiv.appendChild(div3);
+
+      body[0].appendChild(mainDiv);
+
+      // Down function
+
+      function down() {
+        for (let i = 0; i < ulLeft.children.length; i++) {
+          console.log(ulLeft.children[i]);
+
+          if (
+            ulLeft.children[i].style.backgroundColor == "gray" &&
+            i < ulLeft.children.length - 1
+          ) {
+            ulLeft.children[i + 1].style.backgroundColor = "gray";
+            ulLeft.children[i].style.backgroundColor = "white";
+
+            return;
+          }
+        }
+      }
+
+      // Up function
+
+      function Up() {
+        for (let i = 0; i < ulLeft.children.length; i++) {
+          console.log(ulLeft.children[i]);
+
+          if (ulLeft.children[i].style.backgroundColor == "gray" && i >= 1) {
+            ulLeft.children[i - 1].style.backgroundColor = "gray";
+            ulLeft.children[i].style.backgroundColor = "white";
+
+            return;
+          }
+        }
+      }
+
+      // >
+
+      function moveToTheRight() {
+        for (let i = 0; i < ulLeft.children.length; i++) {
+          if (ulLeft.children[i].style.backgroundColor == "gray") {
+            ulRight.appendChild(ulLeft.children[i]);
+            ulRight.style.listStyle = "none";
+          }
+        }
+
+        if (0 < ulLeft.children.length && ulRight.children.length < 4) {
+          ulLeft.children[0].style.backgroundColor = "gray";
+        }
+
+        for (let i = 0; i < ulRight.children.length; i++) {
+          ulRight.children[i].style.backgroundColor = "white";
+        }
+      }
+
+      // Delete
+
+      function deleteItem() {
+        for (let i = 0; i < ulLeft.children.length; i++) {
+          if (ulLeft.children[i].style.backgroundColor == "gray") {
+            if (ulLeft.childElementCount > 1 && i == 0) {
+              ulLeft.children[i + 1].style.backgroundColor = "gray";
+              console.log(i);
+            } else {
+              ulLeft.children[0].style.backgroundColor = "gray";
+            }
+
+            ulLeft.children[i].remove();
+
+            return;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

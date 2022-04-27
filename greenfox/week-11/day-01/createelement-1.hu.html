@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Workshop: CreateElement</title>
+  </head>
+
+  <body>
+    <ul class="aszteroidák">
+      <li id="b325" class="aszteroida">The King</li>
+      <li class="aszteroida b326">The Conceited Man</li>
+    </ul>
+    <div class="container"></div>
+    <img
+      src="https://static.independent.co.uk/2021/12/07/10/PRI213893584.jpg?quality=75&width=982&height=726&auto=webp"
+      alt="San"
+    />
+
+    <!--
+      Dolgozhatsz a html script tag-en belül, vagy külön js fájlban is,
+      utóbbi esetén ne felejtsd el beimportálni a js fájlt az alábbi módon:
+      <script src="createelement-1.js"></script>
+    <script>
+      Adj hozzá egy elemet az aszteroida listához 'The Green Fox' tartalommal!
+      Adj hozzá egy elemet az aszteroida listához 'The Lamplighter' tartalommal!
+      Adj hozzá egy címsort (heading) a .container-hez 'Tudok elemeket hozzáadni
+      a DOM-hoz!' tartalommal!
+      Adj hozzá egy képet (bármilyen képet) a konténerhez!
+    </script>
+    -->
+    <script>
+      let li1 = document.createElement("li");
+      let li2 = document.createElement("li");
+
+      let ul = document.getElementsByClassName("aszteroidák");
+      console.log(ul[0]);
+      console.log(li1);
+
+      li1.innerHTML = "The Green Fox";
+      ul[0].appendChild(li1);
+
+      li2.innerHTML = "The Lamplighter";
+      ul[0].appendChild(li2);
+
+      let heading = document.createElement("h2");
+      /* console.log(heading); */
+      heading.innerHTML = "Tudok elemeket hozzáadni a DOM-hoz!";
+
+      let container = document.querySelector(".container");
+      console.log(container);
+      container.appendChild(heading);
+
+      let img = (document.createElement("img").style.width = "300px");
+      img.setAttribute("src", "https://static.independent.co.uk/2021/12/07/10/PRI213893584.jpg?quality=75&width=982&height=726&auto=webp");
+
+      console.log(img);
+    </script>
+  </body>
+</html>
